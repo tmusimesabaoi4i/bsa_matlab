@@ -6,10 +6,11 @@ clc;
 clear;
 
 %% File name
-filename = 'sample1';
+filename = 'sample2';
 
 %% Read audio file
 [y,fs] = audioread(['../' filename '.wav']);
+
 
 %% Make limit of plot and Font size
 lim = { [-1 1] , [0 0.05] , [-0.75 0.75]};
