@@ -17,10 +17,7 @@
 <img src="https://latex.codecogs.com/gif.latex?P" />
 エネルギーを
 <img src="https://latex.codecogs.com/gif.latex?E" />
-としたとき、
-
-<img src="https://latex.codecogs.com/gif.latex?P&space;=&space;\frac{1}{T}&space;\int_{0}^{T}&space;|y(t)|^2&space;td&space;=&space;1&space;,&space;E&space;=&space;\int_{0}^{T}|y(t)|^2&space;td&space;=&space;10" />
-となります。
+としたとき、　<img src="https://latex.codecogs.com/gif.latex?P&space;=&space;\frac{1}{T}&space;\int_{0}^{T}&space;|y(t)|^2&space;td&space;=&space;1&space;,&space;E&space;=&space;\int_{0}^{T}|y(t)|^2&space;td&space;=&space;10" />　となります。
 
 ## フーリエ変換、振幅スペクトル、位相スペクトル
 ここで、フーリエ変換を行うとその信号の振幅情報と位相情報を取り出すことができます。
