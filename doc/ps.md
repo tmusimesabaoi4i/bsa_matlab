@@ -1,8 +1,7 @@
 ## パワーとエネルギーについて
 皆さんはパワーとエネルギーの違いについて説明できますか？
 そんなのは義務教育で習ったよ。という方がほどんどだと思います。
-では以下のような定義域外はすべて0と仮定した、
-周期信号のパワーとエネルギーをそれぞれ求めてください。
+では以下のような周期信号のパワーとエネルギーをそれぞれ求めてください。
 <img src="https://latex.codecogs.com/gif.latex?y(t)&space;=&space;\sqrt{2}&space;\sin{(20^3\pi&space;t)}&space;\mbox{&space;}&space;\{&space;t:0\leq&space;t&space;\leq&space;10&space;\}" />
 求められましたか？
 求められた方は少しお付き合いください。

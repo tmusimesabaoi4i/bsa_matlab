@@ -93,7 +93,7 @@ figure('position', [0, 0, 600*16/9, 600]);
 subplot(2,1,1);
 plot(a_F/1e3,pure_ps);
 ylabel('PS [dB SPL]');
-xlabel('Recording time [sec]');
+xlabel('Sampling frequency [kHz]');
 xlim([a_F(1)/1e3 a_F(end)/1e3]);
 ylim([lim{4}]);
 ax = gca;
@@ -101,7 +101,7 @@ ax.FontSize = setting_fontsize;
 subplot(2,1,2);
 plot(a_F/1e3,pure_psd);
 ylabel('PSD [dB/Hz]');
-xlabel('Recording time [sec]');
+xlabel('Sampling frequency [kHz]');
 xlim([a_F(1)/1e3 a_F(end)/1e3]);
 ylim([lim{5}]);
 ax = gca;
@@ -119,7 +119,7 @@ clc;
 clear;
 
 %% Plot setting
-lim = { [-5 5] , [39-10 47+10] , [-35-10 -27+10] , [39 47] , [-35 -27] };
+lim = { [-5 5] , [39-5 47+10] , [-35-5 -27+10] , [39 47] , [-35 -27] };
 setting_fontsize = 16;
 
 %% File name
