@@ -17,7 +17,7 @@ t = 0 : 1/fs : T-1/fs;
 y = 1/2 * cos(2*pi*2e3*t -pi/4) + 3/2 *cos(2*pi*10e3*t +pi/3) + cos(2*pi*15e3*t);
 
 %% Make limit of plot and Font size
-lim = { [-4 4] , [0 2] , [-0.75 0.75]};
+lim = { [-4 4] , [-250 125] };
 setting_fontsize = 18;
 
 %% Calc fft
