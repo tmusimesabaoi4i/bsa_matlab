@@ -48,6 +48,7 @@ disp(['3: ' num2str(y_ms3) '[W]']);
 disp(['4: ' num2str(y_ms4) '[W]']);
 
 %% Bar
+figure('position', [0, 0, 600*16/9, 600]);
 strA = {'ANS' , 'Pattern1' , 'Pattern2' , 'Pattern3' , 'Pattern4'};
 X = categorical(strA);
 X = reordercats(X,strA);

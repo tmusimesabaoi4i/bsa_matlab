@@ -55,6 +55,7 @@ disp(['3: ' num2str(db_max3) '[dB SPL]']);
 disp(['4: ' num2str(db_max4) '[dB SPL]']);
 
 %% Bar
+figure('position', [0, 0, 600*16/9, 600]);
 strA = {'ANS' , 'Pattern1' , 'Pattern2' , 'Pattern3' , 'Pattern4'};
 X = categorical(strA);
 X = reordercats(X,strA);
