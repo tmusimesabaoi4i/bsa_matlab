@@ -27,10 +27,8 @@
 
 <img src="https://latex.codecogs.com/gif.latex?y(t)&space;=&space;\frac{1}{2}&space;\cos(4\times10^3\pi&space;t&space;-&space;\pi/4)&space;&plus;&space;\frac{3}{2}\cos(20\times10^3\pi&space;t&space;&plus;&space;\pi/3)&space;&plus;&space;\cos(30\times10^3\pi&space;t)" />
 から振幅情報と位相情報を取り出してみましょう。取り出すと以下の図のようになります。
-
-[code](../prog/ps/ex3.m)
 <img src="../img/ps/cos_wave.png" />
-コードの説明ですが、`Y = fft(y);`でフーリエスペクトルを求めています。
+[コード](../prog/ps/ex3.m)の説明ですが、`Y = fft(y);`でフーリエスペクトルを求めています。
 
 [MATLABの公式ドキュメント-fft](https://jp.mathworks.com/help/matlab/ref/fft.html)
 に書かれていますが、求められる`Y`は両側スペクトルなので、片側スペクトルに変換を行っています。
