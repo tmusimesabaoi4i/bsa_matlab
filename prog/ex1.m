@@ -6,14 +6,10 @@ clc;
 clear;
 
 %% File name
-% filename = 'cos wave';
-filename = 'sample';
+filename = 'sample1';
 
 %% Read audio file
 [y,fs] = audioread(['../' filename '.wav']);
-% fs = 44.1e3;
-% t = 0:1/fs:1-1/fs;
-% y = 1/2 * cos(2*pi*2e3*t -pi/4) + 3/2 *cos(2*pi*10e3*t +pi/3) + cos(2*pi*15e3*t);
 
 %% Make limit of plot and Font size
 lim = { [-1 1] , [0 0.05] , [-0.75 0.75]};

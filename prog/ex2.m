@@ -6,30 +6,19 @@ clc;
 clear;
 
 %% File name
-filename = 'cos_wave';
+filename = 'sample2';
+
+%% Read audio file
+[y,fs] = audioread(['../' filename '.wav']);
+
+
+%% Make limit of plot and Font size
+lim = { [-1 1] , [0 0.05] , [-0.75 0.75]};
+setting_fontsize = 18;
 
 %% Make time array
-<<<<<<< HEAD
-fs = 44.1e3;
-=======
->>>>>>> b5da6b5df539b341cc9c56a36bf5e0a989452e58
-T = 5;
+T = length(y)/fs;
 t = 0 : 1/fs : T-1/fs;
-
-%% Make sound wave
-<<<<<<< HEAD
-y = 1/2 * cos(2*pi*2e3*t -pi/4) + 3/2 *cos(2*pi*10e3*t +pi/3) + cos(2*pi*15e3*t);
-
-%% Make limit of plot and Font size
-lim = { [-4 4] , [0 2] , [-0.75 0.75]};
-=======
-fs = 44.1e3;
-y = 1/2 * cos(2*pi*2e3*t -pi/4) + 3/2 *cos(2*pi*10e3*t +pi/3) + cos(2*pi*15e3*t);
-
-%% Make limit of plot and Font size
-lim = { [-1 1] , [0 2] , [-0.75 0.75]};
->>>>>>> b5da6b5df539b341cc9c56a36bf5e0a989452e58
-setting_fontsize = 18;
 
 %% Get amplitude and theta
 Y = fft(y);
