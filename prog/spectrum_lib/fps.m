@@ -1,6 +1,3 @@
-% 信号のパワースペクトル
-% https://www.onosokki.co.jp/HP-WK/eMM_back/emm146.pdf
-
 %% start
 
 function [f,psx] = fps(x,fs)

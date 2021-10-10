@@ -1,6 +1,3 @@
-% 信号のパワースペクトル密度
-% https://www.onosokki.co.jp/HP-WK/eMM_back/emm148.pdf
-
 %% start
 
 function [f,gx] = fpsd(x,fs)

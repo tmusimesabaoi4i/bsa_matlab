@@ -1,14 +1,10 @@
-% 信号のパワースペクトル
-% https://www.onosokki.co.jp/HP-WK/eMM_back/emm146.pdf
-% https://jp.mathworks.com/help/signal/ug/amplitude-estimation-and-zero-padding.html
-
 %% start
 
 function [f,psx] = fps_pad(x,fs)
   padT = 100;
   lpad = fs*padT;
   N = length(x);
-  xdft = fft(x,lpad);
+  xdft = fft(x,uint32(lpad));
   ck_temp = abs(xdft/N);
   ck = ck_temp(1:lpad/2+1);
   ck2 = ck.^2;
