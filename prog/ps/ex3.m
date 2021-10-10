@@ -20,24 +20,27 @@ y = 1/2 * cos(2*pi*2e3*t -pi/4) + 3/2 *cos(2*pi*10e3*t +pi/3) + cos(2*pi*15e3*t)
 lim = { [-4 4] , [0 2] , [-0.75 0.75]};
 setting_fontsize = 18;
 
-%% Get amplitude and theta
+%% Calc fft
 Y = fft(y);
 L = length(Y);
-amplitude = abs(Y/L);
-h_amplitude = amplitude(1:L/2+1);
-h_amplitude(2:end-1) = 2*h_amplitude(2:end-1);
 
-re = real(Y/L);
-im = imag(Y/L);
+%% Get Single-Sided Spectrum
+z = Y/L;
+h_z = z(1:L/2+1);
+h_z(2:end-1) = 2*h_z(2:end-1);
 
-tol = 5e-3;
+%% Get amplitude
+amplitude = abs(h_z);
+
+%% Get theta
+re = real(h_z);
+im = imag(h_z);
+tol = 1e-2;
 im(amplitude < tol) = 0;
-
 theta = atan(im./re);
-h_theta = theta(1:L/2+1);
 
 %% Make frequency array
-f = linspace(0,fs/2,length(h_amplitude));
+f = linspace(0,fs/2,length(amplitude));
 
 %% Make figure
 figure('position', [0, 0, 600*16/9, 600]);
@@ -54,7 +57,7 @@ ax.FontSize = setting_fontsize;
 
 %% Amplitude plot
 subplot(3,1,2);
-plot(f/1e3,h_amplitude);
+plot(f/1e3,amplitude);
 ylabel('amplitude');
 xlabel('frequency [kHz]');
 xlim([f(1)/1e3 f(end)/1e3]);
@@ -64,7 +67,7 @@ ax.FontSize = setting_fontsize;
 
 %% Theta plot
 subplot(3,1,3);
-plot(f/1e3,h_theta/pi);
+plot(f/1e3,theta/pi);
 ylabel('theta / \pi');
 xlabel('frequency [kHz]');
 xlim([f(1)/1e3 f(end)/1e3]);
