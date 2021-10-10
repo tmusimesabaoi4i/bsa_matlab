@@ -35,9 +35,9 @@
 [MATLABの公式ドキュメント-fft](https://jp.mathworks.com/help/matlab/ref/fft.html)
 に書かれていますが、求められる`Y`は両側スペクトルなので、片側スペクトルに変換を行っています。
 また、フーリエスペクトルから複素フーリエ係数に変換した後に
-片側スペクトル<img src="https://latex.codecogs.com/gif.latex?Z(f)" />
-に対して、振幅スペクトルは<img src="https://latex.codecogs.com/gif.latex?|Z(f)|" />
-であり、位相スペクトルは<img src="https://latex.codecogs.com/gif.latex?\tan^{-1}\left(\frac{Im\{Z(f)\}}{Re\{Z(f)\}}\right)" />
+片側スペクトル　<img src="https://latex.codecogs.com/gif.latex?Z(f)" />　
+に対して、振幅スペクトルは　<img src="https://latex.codecogs.com/gif.latex?|Z(f)|" />　
+であり、位相スペクトルは　<img src="https://latex.codecogs.com/gif.latex?\tan^{-1}\left(\frac{Im\{Z(f)\}}{Re\{Z(f)\}}\right)" />　
 と表せられるので、それらを描写して振幅情報と位相情報を取り出しが出来ました。
 
 ## フーリエ変換、パワースペクトル
