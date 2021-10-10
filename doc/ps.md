@@ -25,3 +25,6 @@
 ## フーリエ変換、振幅スペクトル、位相スペクトル
 ここで、フーリエ変換を行うとその信号の振幅情報と位相情報を取り出すことができます。
 ではサンプル音源から、振幅情報と位相情報を取り出してみましょう。
+<img src="https://latex.codecogs.com/gif.latex?y(t)&space;=&space;\frac{1}{2}&space;\cos(4\times10^3\pi&space;t&space;-&space;\pi/4)&space;&plus;&space;\cos(20\times10^3\pi&space;t&space;&plus;&space;\pi/3)&space;&plus;&space;\cos(30\times10^3\pi&space;t)" />
+の振幅情報と位相情報を取り出した図は以下の通りです。
+<img src="../img/ps/cos_wave.png" />
