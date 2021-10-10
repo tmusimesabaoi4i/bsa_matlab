@@ -6,19 +6,19 @@ clc;
 clear;
 
 %% File name
-filename = 'sample2';
-
-%% Read audio file
-[y,fs] = audioread(['../' filename '.wav']);
-
-
-%% Make limit of plot and Font size
-lim = { [-1 1] , [0 0.05] , [-0.75 0.75]};
-setting_fontsize = 18;
+filename = 'cos_wave';
 
 %% Make time array
-T = length(y)/fs;
+fs = 44.1e3;
+T = 5;
 t = 0 : 1/fs : T-1/fs;
+
+%% Make sound wave
+y = 1/2 * cos(2*pi*2e3*t -pi/4) + 3/2 *cos(2*pi*10e3*t +pi/3) + cos(2*pi*15e3*t);
+
+%% Make limit of plot and Font size
+lim = { [-4 4] , [0 2] , [-0.75 0.75]};
+setting_fontsize = 18;
 
 %% Get amplitude and theta
 Y = fft(y);
@@ -74,6 +74,6 @@ ax.FontSize = setting_fontsize;
 
 %% Save as png
 fig = gcf;
-exportgraphics(fig, [ '../img/' filename '.png' ] , 'Resolution', 500);
+exportgraphics(fig, [ '../../img/ps/' filename '.png' ] , 'Resolution', 500);
 
 %% END

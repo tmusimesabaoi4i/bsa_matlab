@@ -6,10 +6,11 @@ clc;
 clear;
 
 %% File name
-filename = 'sample1';
+filename = 'sample2';
 
 %% Read audio file
-[y,fs] = audioread(['../' filename '.wav']);
+[y,fs] = audioread(['../../' filename '.wav']);
+
 
 %% Make limit of plot and Font size
 lim = { [-1 1] , [0 0.05] , [-0.75 0.75]};
@@ -73,6 +74,6 @@ ax.FontSize = setting_fontsize;
 
 %% Save as png
 fig = gcf;
-exportgraphics(fig, [ '../img/' filename '.png' ] , 'Resolution', 500);
+exportgraphics(fig, [ '../../img/ps/' filename '.png' ] , 'Resolution', 500);
 
 %% END
