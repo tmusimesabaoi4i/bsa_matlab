@@ -9,7 +9,7 @@ Windowを併用した場合はWindowのエネルギー補正も行う必要が�
 0パディングの補正係数を求める際はWindowを利用してはいけない。
 
 |&nbsp;&nbsp;&nbsp;&nbsp;名前&nbsp;&nbsp;&nbsp;&nbsp;|ACF|ECF|0pad CF|
-|:---:|---|---|
+|:---:|---|---|---|
 |Pattern1|適用する|適用する|適用しない|
 |Pattern2|適用する|適用しない|適用しない|
 |Pattern3|適用しない|適用する|適用しない|
