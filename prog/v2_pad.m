@@ -34,7 +34,8 @@ for fs = a_F
   t = 0 : 1/fs : T - 1/fs;
   y = A * sin(2 * pi * freq * t);
 
-  [y,~,~] = wind_y(y);
+  [y,ACF,ECF] = wind_y(y);
+  y = ACF * y;
 
   %% Plot signal
   figure('position', [0, 0, 600*16/9, 600]);
@@ -131,7 +132,8 @@ for fs = a_F
   t = 0 : 1/fs : T - 1/fs;
   y = wgn(length(t),1,0);
 
-  [y,~,~] = wind_y(y');
+  [y,ACF,ECF] = wind_y(y');
+  y = ACF * y;
 
   %% Plot signal
   figure('position', [0, 0, 600*16/9, 600]);
