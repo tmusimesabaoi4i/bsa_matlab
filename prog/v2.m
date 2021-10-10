@@ -9,7 +9,7 @@ clear;
 addpath('spectrum_lib/');
 
 %% Plot setting
-lim = { [-2 2] , [-25 125] , [-100 25] };
+lim = { [-2 2] , [90 98] , [0 8] , [90 98] , [0 8] };
 setting_fontsize = 16;
 
 %% File name
@@ -71,6 +71,8 @@ for fs = a_F
   ax = gca;
   ax.FontSize = setting_fontsize;
 
+  pure_psd(n) = max(10*log10(gx));
+
   %% Save at frame
   F(n) = getframe(gcf);
   n = n + 1;
@@ -88,11 +90,20 @@ close(v);
 
 %% Plot signal
 figure('position', [0, 0, 600*16/9, 600]);
+subplot(2,1,1);
 plot(a_F/1e3,pure_ps);
 ylabel('PS [dB SPL]');
-xlabel('Sampling frequency[kHz]');
+xlabel('Recording time [sec]');
 xlim([a_F(1)/1e3 a_F(end)/1e3]);
-ylim([90 94]);
+ylim([lim{4}]);
+ax = gca;
+ax.FontSize = setting_fontsize;
+subplot(2,1,2);
+plot(a_F/1e3,pure_psd);
+ylabel('PSD [dB/Hz]');
+xlabel('Recording time [sec]');
+xlim([a_F(1)/1e3 a_F(end)/1e3]);
+ylim([lim{5}]);
 ax = gca;
 ax.FontSize = setting_fontsize;
 
@@ -108,7 +119,7 @@ clc;
 clear;
 
 %% Plot setting
-lim = { [-5 5] , [0 100] , [-60 -20] };
+lim = { [-5 5] , [39-10 47+10] , [-51-10 -43+10] , [39 47] , [-51 -43] };
 setting_fontsize = 16;
 
 %% File name
@@ -193,7 +204,7 @@ plot(a_F/1e3,wgn_ps);
 ylabel('PS [dB SPL]');
 xlabel('Sampling frequency[kHz]');
 xlim([a_F(1)/1e3 a_F(end)/1e3]);
-ylim([35 50]);
+ylim([lim{4}]);
 ax = gca;
 ax.FontSize = setting_fontsize;
 subplot(2,1,2);
@@ -201,7 +212,7 @@ plot(a_F/1e3,wgn_psd);
 ylabel('PSD [dB/Hz]');
 xlabel('Sampling frequency[kHz]');
 xlim([a_F(1)/1e3 a_F(end)/1e3]);
-ylim([-52 -42]);
+ylim([lim{5}]);
 ax = gca;
 ax.FontSize = setting_fontsize;
 
