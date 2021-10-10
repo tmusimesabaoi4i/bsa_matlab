@@ -25,5 +25,3 @@
 ## フーリエ変換、振幅スペクトル、位相スペクトル
 ここで、フーリエ変換を行うとその信号の振幅情報と位相情報を取り出すことができます。
 ではサンプル音源から、振幅情報と位相情報を取り出してみましょう。
-
-<audio controls src="https://github.com/tmusimesabaoi4i/bsa_matlab/blob/main/sample1.wav"></audio>
